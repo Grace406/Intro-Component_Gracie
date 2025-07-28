@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* primary-colors */
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+
+    /* accent-colors */
+    --accent-purple: hsl(248, 32%, 49%);
+
+    /* neutral-colors */
+    --neutral-gray: hsl(249, 10%, 26%);
+    --neutral-purple: hsl(246, 25%, 77%);
+}
+
+body{
+    background-color: var(--primary-red);
+    background-color: var(--primary-red);
+    color: #fff;
+    background-image: url(images/bg-intro-desktop.png);
+    min-height: 100vh;
+    font-family: 'Poppins';
+    display: grid;
+    place-content: center;
+}
+
+.component-container{
+    max-width: 1200px;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.left h1{
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.right .message{
+    background-color: var(--accent-purple);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 0 6px 2px 2px #00000045;
+}
+
+.right .message .bold{
+    font-weight: 700;
+
+}
+
+.right .form-container{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 6px 2px 2px #00000045
+}
+
+.right .form-container .form-group{
+    margin-bottom: 1rem;
+}
+
+.right .form-container .input-box{
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    outline: 1px solid var(--neutral-gray);
+    border-radius: .25rem;
+}
+
+.right .form-container .input-box.error{
+    outline: 1px solid var(--primary-red);
+}
+
+.right .form-container .input-box i{
+    color: var(--primary-red);
+    display: none;
+}
+
+.right .form-container .input-box.error i{
+    display: block;
+}
+
+.right .form-container input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+}
+
+.right .form-container .error-message{
+    margin-top: .5rem;
+    color: var(--primary-red);
+    font-size: .75rem;
+    text-align: right;
+    font-style: italic;
+    display: none;
+}
+
+.submit-btn{
+    cursor: pointer;
+    background-color: var(--primary-green);
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.submit-btn:hover{
+    background-color:hsl(154, 59%, 58%) ;
+}
+
+.right .agreement{
+    color: var(--neutral-gray);
+    margin-top: 1rem;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.right .agreement a{
+    color: var(--primary-red);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px){
+    .component-container{
+        grid-template-columns: 1fr;
+    }
+
+    .component-container h1{
+        font-size: 2.5rem;
+    }
+
+    .component-container .left{
+        text-align: center;
+    }
+}
